@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Register</h2>
+<div>
+<form method="post" style="padding: 20px;">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Register" style="padding: 20px;">
+</form>
+
+<a href="{% url 'login' %}" style="text-decoration: none; padding: 10px; background-color: rgb(99, 165, 23); color: white;">Back to login</a>
+</div>
+{% endblock %}

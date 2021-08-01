@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+Hello, {{ user.username|default:'Guest' }}!
+<div style="text-align: center; padding: 20px;">
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" style="text-decoration: none; padding: 10px; background-color: red; color: white;">Logout</a>
+        <a href="{% url 'password_change' %}" style="text-decoration: none; padding: 10px; background-color: rgb(16, 9, 78); color: white;">Change password</a>
+    {% else %}
+        <a href="{% url 'login' %}" style="text-decoration: none; padding: 10px; background-color: rgb(11, 196, 109); color: white;">Login</a>
+    {% endif %}
+</div>
+{% endblock %}

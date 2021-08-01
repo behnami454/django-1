@@ -1,0 +1,21 @@
+<!--users/templates/base.html-->
+<style>
+    label, input {
+        display: block;
+    }
+    span.helptext {
+        display: none;
+    }
+</style>
+
+<div style="text-align: center; padding: 20px;">
+    <h1>Welcome</h1>
+    <br>
+    <a href="{% url 'login' %}" style="text-decoration: none; padding: 10px; background-color: rgb(44, 29, 185); color: white;">log in</a>
+
+</div>
+
+
+
+{% block content %}
+{% endblock %}
